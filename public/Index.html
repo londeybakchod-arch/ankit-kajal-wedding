@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ankit ❤ Kajal | A Garhwali Wedding Celebration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,500&family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --hero-sky-1:#7ec1e8; --hero-sky-2:#a9d9ec; --hero-sky-3:#ffdca3; --hero-sky-4:#ffe9c2; --hero-sky-5:#fff6e8;
+  --gold:#d4af37; --gold-light:#f4e4b8; --maroon:#7a0c1e; --deep-red:#b8143c;
+  --mehandi-1:#0f3d0f; --mehandi-2:#2d5016; --mehandi-4:#c9e265;
+  --haldi-1:#8a5a00; --haldi-2:#ffb703;
+  --wedding-1:#3a0000; --wedding-2:#7a0c1e; --wedding-4:#ffd700;
+  --reception-1:#040d21; --reception-2:#0b1f3a; --reception-4:#d4af37;
+  --font-script:'Great Vibes', cursive;
+  --font-head:'Cinzel', serif;
+  --font-elegant:'Playfair Display', serif;
+  --font-body:'Mukta', sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:#0c0c14;color:#fff;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+::selection{background:var(--gold);color:#2a0000;}
+::-webkit-scrollbar{width:10px;}
+::-webkit-scrollbar-track{background:#12121c;}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--gold),var(--maroon));border-radius:10px;}
+
+/* ============ LOADER ============ */
+#loader{position:fixed;inset:0;z-index:9999;background:radial-gradient(circle at center,#2a0a4a,#0c0416 80%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .8s ease, visibility .8s ease;}
+#loader.hide{opacity:0;visibility:hidden;}
+.loader-om{font-family:var(--font-script);font-size:5rem;color:var(--gold);text-shadow:0 0 25px rgba(212,175,55,.8);animation:pulseOm 1.6s ease-in-out infinite;}
+@keyframes pulseOm{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.15);opacity:1}}
+.loader-text{font-family:var(--font-head);letter-spacing:4px;color:var(--gold-light);font-size:.85rem;text-transform:uppercase;}
+.loader-bar{width:220px;height:3px;background:rgba(255,255,255,.15);border-radius:5px;overflow:hidden;}
+.loader-bar::after{content:'';display:block;height:100%;width:40%;background:linear-gradient(90deg,var(--gold),#fff5,var(--gold));animation:loading 1.2s ease-in-out infinite;}
+@keyframes loading{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}
+
+/* ============ MUSIC BUTTON ============ */
+.music-btn{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:linear-gradient(145deg,var(--gold),#a5791f);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.4);border:2px solid rgba(255,255,255,.4);animation:musicFloat 3s ease-in-out infinite;}
+@keyframes musicFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.music-btn i{color:#3a0000;font-size:1.3rem;}
+.music-btn.playing i{animation:spin 3s linear infinite;}
+@keyframes spin{100%{transform:rotate(360deg)}}
+
+/* ============ NAVBAR ============ */
+.navbar{position:fixed;top:0;left:0;width:100%;z-index:900;background:rgba(10,8,20,.35);backdrop-filter:blur(14px);border-bottom:1px solid rgba(212,175,55,.25);}
+.nav-container{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1300px;margin:0 auto;}
+.logo{font-family:var(--font-script);font-size:1.8rem;color:var(--gold);}
+.nav-links{display:flex;gap:20px;flex-wrap:wrap;}
+.nav-links a{font-family:var(--font-head);font-size:.66rem;letter-spacing:1.2px;text-transform:uppercase;color:#f2e9d8;position:relative;padding-bottom:4px;transition:color .3s;}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .3s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-links a:hover::after{width:100%;}
+.nav-toggle{display:none;font-size:1.5rem;color:var(--gold);cursor:pointer;}
+
+/* ============ HERO ============ */
+.hero{position:relative;height:100vh;min-height:640px;width:100%;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;}
+.sky{position:absolute;inset:0;background:linear-gradient(to bottom,var(--hero-sky-1) 0%,var(--hero-sky-2) 30%,var(--hero-sky-3) 58%,var(--hero-sky-4) 78%,var(--hero-sky-5) 95%);}
+.sun-glow{position:absolute;left:50%;bottom:30%;width:340px;height:340px;transform:translate(-50%,0);background:radial-gradient(circle,rgba(255,244,214,.9) 0%,rgba(255,214,140,.5) 40%,transparent 70%);filter:blur(6px);animation:glowPulse 4s ease-in-out infinite;}
+@keyframes glowPulse{0%,100%{opacity:.75;transform:translate(-50%,0) scale(1)}50%{opacity:1;transform:translate(-50%,0) scale(1.08)}}
+.sun{position:absolute;left:50%;bottom:14%;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fffdf5,#ffe9a8 45%,#ffc95c 85%);box-shadow:0 0 90px 40px rgba(255,220,150,.6);transform:translate(-50%,0);animation:sunrise 6s ease-out forwards;}
+@keyframes sunrise{0%{bottom:2%;opacity:.4}100%{bottom:30%;opacity:1}}
+.rays{position:absolute;left:50%;bottom:14%;width:600px;height:600px;transform:translate(-50%,0);background:repeating-conic-gradient(from 0deg, rgba(255,240,200,.18) 0deg 6deg, transparent 6deg 18deg);border-radius:50%;animation:rotateRays 40s linear infinite;pointer-events:none;}
+@keyframes rotateRays{100%{transform:translate(-50%,0) rotate(360deg)}}
+.clouds{position:absolute;inset:0;}
+.cloud{position:absolute;background:rgba(255,255,255,.75);border-radius:50px;filter:blur(2px);animation:drift linear infinite;}
+@keyframes drift{0%{transform:translateX(-15vw)}100%{transform:translateX(115vw)}}
+.birds-container{position:absolute;inset:0;pointer-events:none;z-index:5;}
+.bird{position:absolute;width:34px;height:18px;animation:flyAcross linear infinite;}
+.bird svg{width:100%;height:100%;}
+.bird .wing{transform-origin:center;animation:flap .35s ease-in-out infinite alternate;}
+@keyframes flap{0%{transform:scaleY(1)}100%{transform:scaleY(.35)}}
+@keyframes flyAcross{0%{transform:translate(-10vw,0)}25%{transform:translate(30vw,-30px)}50%{transform:translate(60vw,10px)}75%{transform:translate(90vw,-15px)}100%{transform:translate(115vw,0)}}
+.mountains{position:absolute;bottom:0;left:0;width:100%;height:60%;z-index:2;}
+.mountain{position:absolute;bottom:0;width:100%;height:100%;}
+.m-back{height:68%;opacity:.7;background:linear-gradient(to bottom,#ffffff 0%,#fff 20%, #cfe0f0 40%,#a9bfd9 100%);clip-path:polygon(0% 70%,8% 45%,16% 62%,26% 30%,36% 55%,46% 20%,55% 48%,65% 25%,74% 52%,84% 32%,92% 58%,100% 40%,100% 100%,0% 100%);}
+.m-mid{height:80%;opacity:.85;background:linear-gradient(to bottom,#ffffff 0%,#fff 16%, #b7cbe6 35%,#8ca4c9 100%);clip-path:polygon(0% 80%,10% 50%,20% 68%,32% 25%,42% 58%,52% 15%,62% 50%,72% 28%,82% 60%,92% 35%,100% 65%,100% 100%,0% 100%);}
+.m-front{height:100%;background:linear-gradient(to bottom,#ffffff 0%,#fff 12%, #9fb6d6 28%,#6c85ac 100%);clip-path:polygon(0% 85%,7% 55%,15% 78%,24% 38%,34% 70%,44% 20%,54% 60%,64% 30%,73% 68%,83% 42%,90% 75%,100% 50%,100% 100%,0% 100%);}
+.snow-shimmer{position:absolute;bottom:0;left:0;width:100%;height:60%;z-index:3;pointer-events:none;background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.25) 50%,transparent 60%);background-size:250% 250%;animation:shimmer 8s ease-in-out infinite;}
+@keyframes shimmer{0%{background-position:0% 0%}50%{background-position:100% 100%}100%{background-position:0% 0%}}
+.patang-strip{position:absolute;top:0;left:0;width:100%;z-index:6;padding-top:2px;}
+.patang-line{position:relative;height:2px;background:rgba(255,255,255,.5);width:100%;}
+.patang-flags{display:flex;justify-content:space-evenly;width:100%;position:absolute;top:0;left:0;}
+.patang{width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;border-top:22px solid var(--pc,#e63946);transform-origin:top center;animation:patangSwing 2.6s ease-in-out infinite;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25));}
+@keyframes patangSwing{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
+.hero-content{position:relative;z-index:10;padding:0 20px;}
+.hero-om{font-family:var(--font-script);font-size:2.4rem;color:#8a5a00;text-shadow:0 0 20px rgba(255,220,150,.7);margin-bottom:6px;}
+.hero-tag{font-family:var(--font-head);letter-spacing:5px;font-size:.75rem;color:#7a4a00;text-transform:uppercase;margin-bottom:14px;opacity:.9;}
+.hero-names{font-family:var(--font-script);font-size:clamp(3rem,9vw,6.5rem);line-height:1.1;color:#3a2200;text-shadow:0 4px 20px rgba(255,255,255,.6);}
+.hero-names span{color:#b8143c;}
+.hero-sub{font-family:var(--font-elegant);font-style:italic;font-size:1.05rem;margin-top:10px;color:#5a3a10;letter-spacing:1px;}
+.countdown{display:flex;gap:16px;justify-content:center;margin-top:36px;flex-wrap:wrap;}
+.countdown-item{background:rgba(255,255,255,.35);border:1px solid rgba(212,175,55,.6);backdrop-filter:blur(6px);padding:14px 18px;border-radius:12px;min-width:78px;}
+.countdown-item .num{font-family:var(--font-head);font-size:1.8rem;font-weight:700;color:#5a2d00;}
+.countdown-item .lbl{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:#5a2d00;opacity:.85;}
+.scroll-indicator{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:10;color:#5a2d00;font-size:1.4rem;animation:bounce 2s infinite;}
+@keyframes bounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
+
+/* ============ SECTION HEADINGS ============ */
+.section-pad{padding:110px 20px;position:relative;overflow:hidden;}
+.sec-eyebrow{text-align:center;font-family:var(--font-head);letter-spacing:4px;text-transform:uppercase;font-size:.75rem;color:var(--gold);margin-bottom:8px;}
+.sec-title{text-align:center;font-family:var(--font-script);font-size:clamp(2.4rem,5vw,3.6rem);margin-bottom:14px;color:#fff;}
+.sec-line{width:90px;height:2px;margin:0 auto 50px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.reveal{opacity:0;transform:translateY(40px);transition:all .9s cubic-bezier(.2,.7,.2,1);}
+.reveal.active{opacity:1;transform:translateY(0);}
+
+/* ============ LED FAIRY LIGHTS — CURVED SWAG STYLE ============ */
+.led-string{position:relative;width:100%;height:55px;overflow:visible;}
+.led-svg-wire{position:absolute;top:0;left:0;width:100%;height:100%;overflow:visible;}
+.led-svg-wire path{fill:none;stroke:rgba(180,140,60,.5);stroke-width:1.5;}
+.led-bulb{position:absolute;width:9px;height:12px;border-radius:50% 50% 45% 45%;background:currentColor;transform:translate(-50%,-50%);}
+.led-bulb::before{content:'';position:absolute;left:50%;top:-5px;width:2px;height:6px;background:#6b5535;transform:translateX(-50%);}
+.led-bulb.blink{animation:ledBlink ease-in-out infinite;}
+@keyframes ledBlink{0%,100%{opacity:.32; box-shadow:0 0 3px 1px currentColor;}50%{opacity:1; box-shadow:0 0 10px 3px currentColor, 0 0 20px 7px currentColor;}}
+
+/* ============ BLESSING ============ */
+.blessing{background:radial-gradient(ellipse at top,#241639,#0c0714 70%);text-align:center;}
+.blessing-om{font-family:var(--font-script);font-size:3rem;color:var(--gold);margin-bottom:18px;}
+.blessing-shloka{font-family:var(--font-elegant);font-style:italic;max-width:650px;margin:0 auto 20px;color:#e9dfff;font-size:1.05rem;line-height:1.9;}
+.blessing-note{max-width:700px;margin:0 auto;color:#cfc7e8;font-size:1rem;line-height:1.9;}
+.blessing-note b{color:var(--gold-light);}
+
+/* ============ COUPLE ============ */
+.couple-section{background:radial-gradient(ellipse at top, #241a3a 0%, #150b23 55%, #0f0818 100%);position:relative;}
+.couple-section::before{content:'';position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle, rgba(212,175,55,.06) 1px, transparent 1px);background-size:26px 26px;opacity:.6;}
+.couple-bg-petals{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0;}
+
+/* Featured Couple Photo (optional - only shows if couple.jpg exists) */
+.featured-couple-photo{
+  position:relative;z-index:2;max-width:380px;margin:0 auto 50px;
+  border-radius:24px;overflow:hidden;
+  border:4px solid var(--gold);
+  box-shadow:0 20px 50px rgba(0,0,0,.5), 0 0 40px rgba(212,175,55,.25);
+}
+.featured-couple-photo img{width:100%;height:320px;object-fit:cover;display:block;}
+.featured-couple-caption{
+  position:absolute;bottom:0;left:0;width:100%;
+  background:linear-gradient(to top, rgba(0,0,0,.85), transparent);
+  padding:30px 20px 14px;text-align:center;
+  font-family:var(--font-script);font-size:1.6rem;color:var(--gold-light);
+}
+
+.couple-grid{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;}
+.couple-card{width:300px;text-align:center;padding:46px 26px 34px;border-radius:24px;position:relative;background:linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.015));border:1px solid rgba(212,175,55,.35);backdrop-filter:blur(8px);transition:transform .45s ease, box-shadow .45s ease, border-color .45s ease;box-shadow:0 10px 30px rgba(0,0,0,.25);}
+.couple-card:hover{transform:translateY(-12px);border-color:var(--gold);box-shadow:0 25px 50px rgba(0,0,0,.4), 0 0 40px rgba(212,175,55,.15);}
+.crest{position:absolute;top:-22px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:50%;background:linear-gradient(145deg,var(--gold),#8a6a1f);display:flex;align-items:center;justify-content:center;color:#2a1600;font-size:1.15rem;box-shadow:0 6px 18px rgba(212,175,55,.5);border:2px solid rgba(255,255,255,.5);}
+.photo-ring{position:relative;width:150px;height:150px;margin:16px auto 22px;display:flex;align-items:center;justify-content:center;}
+.photo-ring::before{content:'';position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg, var(--gold), transparent 25%, var(--gold) 50%, transparent 75%, var(--gold));animation:ringSpin 6s linear infinite;opacity:.9;}
+.photo-ring::after{content:'';position:absolute;inset:8px;border-radius:50%;background:#150b23;}
+@keyframes ringSpin{100%{transform:rotate(360deg);}}
+
+/* Couple photo — supports real image with initial fallback */
+.couple-photo{
+  position:relative;z-index:2;width:130px;height:130px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--maroon));
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+  border:3px solid rgba(255,255,255,.5);box-shadow:0 0 25px rgba(212,175,55,.4);
+}
+.couple-photo .photo-initial{
+  position:absolute;font-family:var(--font-script);font-size:2.6rem;color:#fff;z-index:1;
+}
+.couple-photo img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;
+}
+
+.couple-name{font-family:var(--font-elegant);font-size:1.65rem;margin-bottom:4px;color:#fff;}
+.couple-role{display:inline-block;font-size:.65rem;letter-spacing:2.5px;text-transform:uppercase;color:#2a1600;background:linear-gradient(90deg,var(--gold-light),var(--gold));padding:4px 14px;border-radius:20px;font-weight:700;margin-top:6px;}
+.name-divider{display:flex;align-items:center;justify-content:center;gap:8px;margin:18px 0;}
+.name-divider span{width:32px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
+.name-divider span:last-child{background:linear-gradient(90deg,var(--gold),transparent);}
+.name-divider i{font-size:.5rem;color:var(--gold);}
+.couple-detail{font-size:.92rem;color:#d8cfe8;line-height:2;}
+.couple-detail i{color:var(--gold);width:16px;margin-right:4px;}
+.couple-detail b{color:var(--gold-light);font-weight:600;}
+.couple-loc{margin-top:14px;font-size:.8rem;color:#a89ec2;}
+.couple-loc i{color:var(--maroon);margin-right:6px;}
+.divider-heart{flex-shrink:0;display:flex;align-items:center;justify-content:center;gap:10px;width:110px;}
+.heart-line{width:34px;height:1px;flex-shrink:0;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.heart-core{position:relative;width:56px;height:56px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.heart-icon{position:relative;z-index:3;font-size:2rem;color:var(--maroon);text-shadow:0 0 15px rgba(184,20,60,.7);animation:heartbeat 1.6s ease-in-out infinite;}
+.heart-ripple{position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(184,20,60,.5);animation:ripple 2.4s ease-out infinite;}
+.heart-ripple.delay{animation-delay:1.2s;}
+@keyframes ripple{0%{transform:scale(.5);opacity:1;}100%{transform:scale(2);opacity:0;}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+.union-tag{position:relative;z-index:2;text-align:center;margin-top:50px;font-family:var(--font-head);letter-spacing:2px;font-size:.85rem;color:var(--gold-light);}
+.union-tag i{color:var(--gold);margin-right:8px;}
+@media(max-width:768px){
+  .couple-grid{flex-direction:column;}
+  .divider-heart{width:auto;flex-direction:row;margin:6px 0;}
+  .heart-line{width:50px;}
+}
+
+/* ============ FAMILY — WITH PARENT PHOTOS ============ */
+.family-section{background:linear-gradient(160deg,#0f0818,#1a0f2a);position:relative;}
+.family-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;max-width:900px;margin:0 auto;}
+.family-card{
+  padding:38px 30px 34px;
+  border-radius:20px;
+  text-align:center;
+  position:relative;
+  background:linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.015));
+  border:1px solid rgba(212,175,55,.3);
+  transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease;
+}
+.family-card:hover{
+  transform:translateY(-8px);
+  border-color:var(--gold);
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+.family-top-accent{
+  width:70px;height:3px;margin:0 auto 24px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  border-radius:10px;
+}
+
+/* Parent Photos Row */
+.parent-photos-row{
+  display:flex;justify-content:center;gap:28px;margin-bottom:22px;
+}
+.parent-photo-item{display:flex;flex-direction:column;align-items:center;gap:8px;}
+.parent-photo{
+  position:relative;width:82px;height:82px;border-radius:50%;overflow:hidden;
+  background:linear-gradient(135deg,var(--gold),var(--maroon));
+  display:flex;align-items:center;justify-content:center;
+  border:3px solid rgba(255,255,255,.5);
+  box-shadow:0 6px 18px rgba(212,175,55,.35);
+}
+.parent-photo .photo-initial{
+  position:absolute;font-family:var(--font-script);font-size:1.7rem;color:#fff;z-index:1;
+}
+.parent-photo img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;
+}
+.parent-label{font-size:.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:600;}
+
+.garland{
+  height:12px;width:85%;margin:0 auto 24px;
+  background-image:radial-gradient(circle,#ffb703 3px, transparent 3.5px);
+  background-size:16px 16px;background-position:center;
+  opacity:.85;
+}
+.family-card h4{font-family:var(--font-elegant);font-size:1.35rem;margin-bottom:4px;color:#fff;}
+.fam-role{display:block;font-size:.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.family-card p{color:#cfc7e8;font-size:.96rem;line-height:1.85;margin-bottom:16px;}
+.fam-village{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;color:#a89ec2;background:rgba(255,255,255,.04);padding:6px 14px;border-radius:20px;border:1px solid rgba(212,175,55,.2);}
+.fam-village i{color:var(--maroon);}
+
+/* ============ TIMELINE ============ */
+.timeline{background:#0c0714;}
+.timeline-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;max-width:1100px;margin:0 auto;}
+.tl-card{position:relative;overflow:hidden;padding:32px 20px;border-radius:18px;text-align:center;cursor:pointer;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.01));border:1px solid rgba(212,175,55,.25);transition:transform .4s, border-color .4s, box-shadow .4s;}
+.tl-card:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 15px 35px rgba(0,0,0,.4);}
+.tl-icon,.tl-date,.tl-name,.tl-desc{position:relative;z-index:3;transition:color .4s;}
+.tl-icon{font-size:2rem;margin-bottom:14px;color:var(--gold-light);}
+.tl-date{font-family:var(--font-head);font-size:.75rem;letter-spacing:2px;color:var(--gold);margin-bottom:6px;}
+.tl-name{font-family:var(--font-elegant);font-size:1.5rem;margin-bottom:8px;color:#fff;}
+.tl-desc{font-size:.85rem;color:#cfc7e8;}
+.tl-flash{position:absolute;inset:0;z-index:1;opacity:0;transition:opacity .45s ease;}
+.tl-card:hover .tl-flash{opacity:1;}
+.tl-particle-layer{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;}
+.tl-mehandi .tl-flash{background:radial-gradient(circle at 50% 20%, rgba(139,195,74,.55), rgba(15,61,15,.9));}
+.tl-mehandi:hover .tl-icon{color:#c9e265;}
+.tl-mehandi:hover .tl-name,.tl-mehandi:hover .tl-date,.tl-mehandi:hover .tl-desc{color:#eaffc7;}
+.tl-haldi .tl-flash{background:radial-gradient(circle at 50% 20%, rgba(255,214,102,.7), rgba(138,90,0,.92));}
+.tl-haldi:hover .tl-icon{color:#4d2f00;}
+.tl-haldi:hover .tl-name,.tl-haldi:hover .tl-date,.tl-haldi:hover .tl-desc{color:#3d2600;}
+.tl-wedding .tl-flash{background:radial-gradient(circle at 50% 10%, rgba(255,215,0,.35), rgba(58,0,0,.92));}
+.tl-wedding:hover .tl-icon{color:#ffd700;}
+.tl-wedding:hover .tl-name,.tl-wedding:hover .tl-date,.tl-wedding:hover .tl-desc{color:#ffe6e6;}
+.tl-reception .tl-flash{background:radial-gradient(circle at 50% 30%, rgba(212,175,55,.4), rgba(4,13,33,.95));}
+.tl-reception:hover .tl-icon{color:#ffd700;}
+.tl-reception:hover .tl-name,.tl-reception:hover .tl-date,.tl-reception:hover .tl-desc{color:#f0e2b0;}
+.tl-particle{position:absolute;opacity:0;}
+.p-mehandi{top:-8%;left:var(--l,50%);width:7px;height:11px;background:#a9d94f;border-radius:0 100% 0 100%;}
+.tl-mehandi:hover .p-mehandi{animation:tlDrop 1.3s ease-in forwards;animation-delay:var(--d,0s);}
+@keyframes tlDrop{0%{transform:translateY(0) rotate(0deg);opacity:0;}15%{opacity:1;}100%{transform:translateY(160px) rotate(240deg);opacity:0;}}
+.p-haldi{top:-8%;left:var(--l,50%);width:8px;height:8px;border-radius:50%;background:radial-gradient(circle,#ffe066,#ffb703);}
+.tl-haldi:hover .p-haldi{animation:tlDrop2 1.1s ease-in forwards;animation-delay:var(--d,0s);}
+@keyframes tlDrop2{0%{transform:translateY(0) scale(.5);opacity:0;}20%{opacity:1;}100%{transform:translateY(150px) scale(1.1);opacity:0;}}
+.p-wedding{top:-8%;left:var(--l,50%);width:10px;height:10px;border-radius:0 100% 0 100%;background:var(--c,#ffd700);}
+.tl-wedding:hover .p-wedding{animation:tlFallRotate 1.6s ease-in forwards;animation-delay:var(--d,0s);}
+@keyframes tlFallRotate{0%{transform:translateY(0) rotate(0deg);opacity:0;}10%{opacity:1;}100%{transform:translateY(170px) rotate(320deg);opacity:0;}}
+.p-reception{top:50%;left:50%;width:4px;height:4px;border-radius:50%;background:var(--c,#ffd700);box-shadow:0 0 6px 2px currentColor;color:var(--c,#ffd700);}
+.tl-reception:hover .p-reception{animation:tlBurst .9s ease-out forwards;animation-delay:var(--d,0s);}
+@keyframes tlBurst{0%{transform:translate(0,0) scale(1);opacity:1;}100%{transform:translate(var(--dx,40px),var(--dy,-40px)) scale(.2);opacity:0;}}
+.tl-boom{position:absolute;top:50%;left:50%;width:10px;height:10px;border-radius:50%;transform:translate(-50%,-50%);border:2px solid rgba(255,215,0,.8);opacity:0;z-index:2;pointer-events:none;}
+.tl-reception:hover .tl-boom{animation:boomRing .7s ease-out forwards;}
+@keyframes boomRing{0%{width:10px;height:10px;opacity:1;}100%{width:160px;height:160px;opacity:0;}}
+
+/* ============ EVENT SECTIONS ============ */
+.event-section{position:relative;padding:120px 20px;text-align:center;overflow:hidden;background-size:cover;background-position:center;}
+.event-overlay{position:absolute;inset:0;z-index:1;}
+.event-content{position:relative;z-index:5;max-width:750px;margin:0 auto;}
+.event-icon-row{display:flex;justify-content:center;gap:22px;margin-bottom:20px;font-size:1.8rem;}
+.event-title{font-family:var(--font-script);font-size:clamp(2.6rem,6vw,4.2rem);margin-bottom:10px;}
+.event-sub{font-family:var(--font-head);letter-spacing:3px;text-transform:uppercase;font-size:.8rem;margin-bottom:26px;opacity:.9;}
+.event-info{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:30px;}
+.event-info div{min-width:150px;}
+.event-info i{font-size:1.3rem;display:block;margin-bottom:8px;}
+.event-info .label{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;opacity:.75;}
+.event-info .value{font-family:var(--font-elegant);font-size:1.1rem;margin-top:4px;}
+.event-desc{font-size:1rem;line-height:1.9;margin-top:22px;opacity:.9;}
+.petals-container{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden;}
+.petal{position:absolute;top:-5%;border-radius:0 100% 0 100%;animation:fall linear infinite;}
+@keyframes fall{0%{transform:translateY(-10vh) rotate(0deg);opacity:0;}10%{opacity:1;}100%{transform:translateY(110vh) rotate(360deg);opacity:.2;}}
+
+.mehandi-bg{background:linear-gradient(160deg,var(--mehandi-1),var(--mehandi-2) 60%,#1a2e0a);}
+.mehandi-bg .event-overlay{background:radial-gradient(circle at 30% 20%,rgba(201,226,101,.15),transparent 60%),radial-gradient(circle at 80% 80%,rgba(107,155,55,.2),transparent 60%);}
+.mehandi-bg .event-title,.mehandi-bg .event-sub,.mehandi-bg .event-icon-row{color:var(--mehandi-4);}
+.mehandi-bg .event-desc,.mehandi-bg .value{color:#eaffc7;}
+.mehandi-bg .label{color:#b7e07a;}
+
+.haldi-bg{background:linear-gradient(160deg,var(--haldi-1),var(--haldi-2) 55%,#4d3300);}
+.haldi-bg .event-overlay{background:radial-gradient(circle at 70% 30%,rgba(255,230,150,.3),transparent 60%);}
+.haldi-bg .event-title,.haldi-bg .event-sub,.haldi-bg .event-icon-row{color:#4d2f00;}
+.haldi-bg .event-desc,.haldi-bg .value{color:#3d2600;}
+.haldi-bg .label{color:#6b4400;}
+
+.wedding-bg{background:linear-gradient(160deg,var(--wedding-1),var(--wedding-2) 55%,#2a0000);}
+.wedding-bg .event-overlay{background:radial-gradient(circle at 50% 0%,rgba(255,215,0,.15),transparent 55%);}
+.wedding-bg .event-title{color:var(--wedding-4);}
+.wedding-bg .event-sub,.wedding-bg .event-icon-row{color:#ffe9a8;}
+.wedding-bg .event-desc,.wedding-bg .value{color:#ffe6e6;}
+.wedding-bg .label{color:#ffd0d0;}
+
+.reception-bg{background:linear-gradient(160deg,var(--reception-1),var(--reception-2) 60%,#000814);}
+.reception-bg .event-overlay{background:radial-gradient(circle at 50% 20%,rgba(212,175,55,.18),transparent 60%);}
+.reception-bg .event-title,.reception-bg .event-icon-row{color:var(--reception-4);}
+.reception-bg .event-sub{color:#f0e2b0;}
+.reception-bg .event-desc,.reception-bg .value{color:#e9e9f5;}
+.reception-bg .label{color:#c7c7de;}
+
+.dhol-wrap{display:flex;justify-content:center;gap:24px;margin:26px 0;}
+.dhol{width:70px;height:90px;position:relative;}
+.dhol .drum{width:100%;height:70%;margin-top:15%;border-radius:14px;background:linear-gradient(160deg,#5a1e00,#7a2b00);border:3px solid var(--gold);}
+.dhol .cap{position:absolute;top:0;left:0;width:100%;height:22px;border-radius:50%;background:radial-gradient(circle,#f5deb3,#c9a86a);}
+.dhol.beat{animation:beat .5s ease-in-out infinite;}
+@keyframes beat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.stick{position:absolute;top:-14px;width:4px;height:26px;background:#5a3b1a;border-radius:2px;animation:hit .5s ease-in-out infinite;}
+.stick.left{left:16px;transform-origin:bottom center;}
+.stick.right{right:16px;transform-origin:bottom center;animation-delay:.25s;}
+@keyframes hit{0%,100%{transform:rotate(-25deg)}50%{transform:rotate(15deg)}}
+
+.diya-row{display:flex;justify-content:center;gap:18px;margin-top:30px;flex-wrap:wrap;}
+.diya{width:28px;height:16px;background:radial-gradient(ellipse at center,#c96f1a,#5a2d00);border-radius:0 0 50% 50%;position:relative;}
+.flame{position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:8px;height:16px;background:radial-gradient(ellipse at bottom,#fff2b0,#ff8a00 60%,transparent);border-radius:50% 50% 20% 20%;animation:flicker 1s ease-in-out infinite alternate;}
+@keyframes flicker{0%{transform:translateX(-50%) scale(1) rotate(-3deg);}100%{transform:translateX(-50%) scale(1.15) rotate(3deg);}}
+
+.firecracker-layer{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;}
+.spark{position:absolute;width:4px;height:4px;border-radius:50%;opacity:0;animation:sparkBurst 2.5s ease-out infinite;}
+@keyframes sparkBurst{0%{transform:translate(0,0) scale(1);opacity:1;}100%{transform:translate(var(--sx,60px),var(--sy,-60px)) scale(.1);opacity:0;}}
+
+/* ============ VENUE ============ */
+.venue{background:#0c0714;}
+.venue-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;max-width:1000px;margin:0 auto;}
+.venue-card{background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.3);border-radius:18px;overflow:hidden;}
+.venue-map{width:100%;height:230px;border:0;filter:grayscale(.3) contrast(1.1);}
+.venue-info{padding:24px;}
+.venue-info h4{font-family:var(--font-elegant);font-size:1.4rem;color:var(--gold-light);margin-bottom:8px;}
+.venue-info p{color:#cfc7e8;line-height:1.7;font-size:.92rem;margin-bottom:14px;}
+.btn-direction{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:30px;background:linear-gradient(90deg,var(--gold),#a5791f);color:#2a0000;font-weight:700;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;}
+
+/* ============ WISHES ============ */
+.wishes{background:linear-gradient(160deg,#150a24,#1c0f2b);}
+.wishes-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;max-width:1100px;margin:0 auto;align-items:start;}
+.wish-form-box{background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.3);border-radius:18px;padding:30px;}
+.wish-form-box h4{font-family:var(--font-elegant);font-size:1.3rem;margin-bottom:18px;color:var(--gold-light);}
+.form-group{margin-bottom:16px;}
+.form-group label{display:block;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.form-group input,.form-group textarea{width:100%;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(212,175,55,.3);color:#fff;font-family:var(--font-body);font-size:.92rem;outline:none;transition:border .3s;}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--gold);}
+.form-group textarea{resize:vertical;min-height:90px;}
+.submit-btn{width:100%;padding:13px;border:none;border-radius:30px;cursor:pointer;background:linear-gradient(90deg,var(--gold),#a5791f);color:#2a0000;font-weight:700;font-size:.85rem;letter-spacing:1.5px;text-transform:uppercase;transition:transform .3s;}
+.submit-btn:hover{transform:translateY(-3px);}
+.submit-btn:disabled{opacity:.6;cursor:not-allowed;transform:none;}
+.wishes-wall{max-height:520px;overflow-y:auto;display:flex;flex-direction:column;gap:16px;padding-right:8px;}
+.wish-card{background:rgba(255,255,255,.045);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:18px 20px;animation:fadeInWish .5s ease;}
+@keyframes fadeInWish{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+.wish-card .wname{font-family:var(--font-elegant);font-size:1.05rem;color:var(--gold-light);margin-bottom:6px;}
+.wish-card .wtext{font-size:.9rem;color:#d8cfe8;line-height:1.6;}
+.wish-card .wtext i{color:var(--maroon);margin-right:6px;}
+
+/* ============ RSVP ============ */
+.rsvp{background:linear-gradient(160deg,#1c0f2b,#12081a);}
+.rsvp-box{max-width:640px;margin:0 auto;background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.3);border-radius:20px;padding:40px 34px;}
+.rsvp-box h4{font-family:var(--font-elegant);text-align:center;font-size:1.3rem;color:var(--gold-light);margin-bottom:24px;}
+.func-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:20px;}
+.func-check{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);border:1px solid rgba(212,175,55,.25);border-radius:10px;padding:12px 14px;cursor:pointer;transition:.3s;}
+.func-check:hover{border-color:var(--gold);}
+.func-check input{width:18px;height:18px;accent-color:var(--gold);}
+.func-check span{font-size:.88rem;}
+.func-check i{color:var(--gold);margin-right:4px;}
+.guest-row{display:flex;gap:16px;flex-wrap:wrap;}
+.guest-row .form-group{flex:1;min-width:140px;}
+.rsvp-note{text-align:center;font-size:.8rem;color:#a89ec2;margin-top:14px;}
+.toast{position:fixed;bottom:100px;right:24px;background:linear-gradient(135deg,var(--gold),#a5791f);color:#2a0000;padding:16px 22px;border-radius:12px;font-weight:600;font-size:.88rem;max-width:280px;box-shadow:0 10px 30px rgba(0,0,0,.4);z-index:1000;transform:translateY(30px);opacity:0;transition:all .4s ease;}
+.toast.show{transform:translateY(0);opacity:1;}
+.toast.error{background:linear-gradient(135deg,#b8143c,#7a0c1e);color:#fff;}
+
+/* ============ FOOTER (FIXED CONTACT BUTTONS) ============ */
+.footer{background:#08050e;text-align:center;padding:70px 20px 30px;position:relative;}
+.footer-om{font-family:var(--font-script);font-size:2.2rem;color:var(--gold);margin-bottom:14px;}
+.footer-blessing{font-family:var(--font-elegant);font-style:italic;font-size:1.1rem;color:#e9dfff;max-width:600px;margin:0 auto 20px;line-height:1.8;}
+.footer-names{font-family:var(--font-script);font-size:2rem;color:#fff;margin-bottom:6px;}
+.footer-sub{color:#a89ec2;font-size:.85rem;margin-bottom:34px;}
+
+/* New clean contact button design - fixes overlap issue */
+.footer-contact{
+  display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-bottom:30px;
+}
+.contact-btn{
+  display:flex;align-items:center;gap:12px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(212,175,55,.3);
+  padding:12px 22px 12px 12px;
+  border-radius:50px;
+  transition:all .3s ease;
+  min-width:210px;
+}
+.contact-btn:hover{
+  border-color:var(--gold);
+  transform:translateY(-4px);
+  background:rgba(255,255,255,.09);
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+.contact-icon{
+  width:44px;height:44px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(145deg,var(--gold),#a5791f);
+  display:flex;align-items:center;justify-content:center;
+  color:#2a1600;font-size:1.15rem;
+}
+.contact-btn.whatsapp .contact-icon{
+  background:linear-gradient(145deg,#25D366,#128C7E);
+  color:#fff;
+}
+.contact-text{
+  font-size:.75rem;color:#cfc7e8;text-align:left;line-height:1.5;
+}
+.contact-text b{
+  display:block;color:#fff;font-size:.9rem;font-family:var(--font-elegant);letter-spacing:.5px;
+}
+
+.footer-back-home{display:flex;justify-content:center;margin-bottom:26px;}
+.footer-back-home a{
+  width:42px;height:42px;border-radius:50%;border:1px solid rgba(212,175,55,.4);
+  display:flex;align-items:center;justify-content:center;color:var(--gold);
+  transition:.3s;
+}
+.footer-back-home a:hover{background:var(--gold);color:#2a1600;}
+.footer-credit{font-size:.72rem;color:#5f5578;letter-spacing:1px;}
+
+@media(max-width:480px){
+  .contact-btn{min-width:100%;justify-content:center;}
+}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:860px){
+  .nav-links{position:fixed;top:0;right:-100%;height:100vh;width:70%;max-width:300px;background:rgba(10,6,20,.97);flex-direction:column;justify-content:center;align-items:center;gap:24px;transition:right .4s ease;}
+  .nav-links.active{right:0;}
+  .nav-toggle{display:block;}
+  .event-info{gap:22px;}
+  .wishes-layout{grid-template-columns:1fr;}
+  .func-grid{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .hero-names{font-size:2.6rem;}
+  .countdown-item{min-width:64px;padding:10px 12px;}
+  .countdown-item .num{font-size:1.3rem;}
+  .section-pad{padding:80px 16px;}
+  .parent-photos-row{gap:16px;}
+}
+</style>
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-om">ॐ</div>
+  <div class="loader-text">Garhwal Ki Dharti Se</div>
+  <div class="loader-bar"></div>
+</div>
+
+<div class="music-btn" id="musicBtn"><i class="fa-solid fa-music"></i></div>
+
+<!-- ================================================================
+     🎵 ADD YOUR SONG HERE: place your mp3 file at public/audio/wedding-song.mp3
+     ================================================================ -->
+<audio id="bgAudio" loop>
+  <source src="audio/wedding-song.mp3" type="audio/mpeg">
+</audio>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">A & K</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#couple">Couple</a></li>
+      <li><a href="#family">Family</a></li>
+      <li><a href="#mehandi">Mehandi</a></li>
+      <li><a href="#haldi">Haldi</a></li>
+      <li><a href="#wedding">Wedding</a></li>
+      <li><a href="#reception">Reception</a></li>
+      <li><a href="#venue">Venue</a></li>
+      <li><a href="#wishes">Wishes</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle"><i class="fa-solid fa-bars"></i></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="sky"></div>
+  <div class="rays"></div>
+  <div class="sun-glow"></div>
+  <div class="sun"></div>
+  <div class="clouds" id="clouds"></div>
+  <div class="mountains">
+    <div class="mountain m-back"></div>
+    <div class="mountain m-mid"></div>
+    <div class="mountain m-front"></div>
+    <div class="snow-shimmer"></div>
+  </div>
+  <div class="birds-container" id="birdsContainer"></div>
+  <div class="patang-strip">
+    <div class="patang-line"></div>
+    <div class="patang-flags" id="patangFlags"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-om">ॐ श्री गणेशाय नमः</div>
+    <div class="hero-tag">Uttarakhand • Pauri Garhwal</div>
+    <h1 class="hero-names">Ankit <span>&</span> Kajal</h1>
+    <p class="hero-sub">दो आत्माएं, एक बंधन — गढ़वाल की धरती से एक प्रेम कहानी</p>
+    <div class="countdown" id="countdown">
+      <div class="countdown-item"><div class="num" id="cd-days">00</div><div class="lbl">Days</div></div>
+      <div class="countdown-item"><div class="num" id="cd-hours">00</div><div class="lbl">Hours</div></div>
+      <div class="countdown-item"><div class="num" id="cd-mins">00</div><div class="lbl">Mins</div></div>
+      <div class="countdown-item"><div class="num" id="cd-secs">00</div><div class="lbl">Secs</div></div>
+    </div>
+  </div>
+  <div class="scroll-indicator"><i class="fa-solid fa-chevron-down"></i></div>
+</header>
+
+<!-- BLESSING -->
+<section class="section-pad blessing reveal">
+  <div class="led-string" id="ledTop"></div>
+  <div style="height:40px;"></div>
+  <div class="blessing-om">ॐ</div>
+  <p class="blessing-shloka">"शुभम् करोति कल्याणम् आरोग्यम् धन सम्पदा।<br>शत्रु बुद्धि विनाशाय दीपज्योतिर्नमोऽस्तुते॥"</p>
+  <p class="blessing-note">With the divine blessings of <b>Lord Badrinath</b> and the grace of our elders,<br>
+  we joyfully invite you to witness and bless the union of<br><b>Ankit & Kajal</b> — celebrated with the beats of <b>Dhol-Damau</b>,
+  the songs of the mountains, and the warmth of Garhwali tradition.</p>
+  <div style="height:40px;"></div>
+  <div class="led-string" id="ledBottom"></div>
+</section>
+
+<!-- COUPLE -->
+<section class="section-pad couple-section reveal" id="couple">
+  <div class="couple-bg-petals" id="couplePetals"></div>
+  <div class="sec-eyebrow">The Bride & The Groom</div>
+  <h2 class="sec-title">Our Union</h2>
+  <div class="sec-line"></div>
+
+  <!-- ================================================================
+       💑 ADD YOUR COUPLE PHOTO HERE (OPTIONAL): 
+       Place a photo at public/images/couple.jpg
+       If the file doesn't exist, this section auto-hides — no broken layout.
+       ================================================================ -->
+  <div class="featured-couple-photo" id="featuredCouplePhoto">
+    <img src="images/couple.jpg" alt="Ankit & Kajal" onerror="document.getElementById('featuredCouplePhoto').style.display='none'">
+    <div class="featured-couple-caption">Ankit & Kajal</div>
+  </div>
+
+  <div class="couple-grid">
+    <div class="couple-card">
+      <div class="crest"><i class="fa-solid fa-om"></i></div>
+      <div class="photo-ring">
+        <!-- ================================================================
+             📸 ADD GROOM PHOTO HERE: place file at public/images/groom.jpg
+             If missing, shows gold circle with "A" initial automatically.
+             ================================================================ -->
+        <div class="couple-photo">
+          <span class="photo-initial">A</span>
+          <img src="images/groom.jpg" alt="Ankit Singh Negi" onerror="this.style.display='none'">
+        </div>
+      </div>
+      <h3 class="couple-name">Ankit Singh Negi</h3>
+      <span class="couple-role">The Groom</span>
+      <div class="name-divider"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+      <p class="couple-detail">
+        <i class="fa-solid fa-user-tie"></i> S/o <b>Brij Mohan Singh</b><br>
+        <i class="fa-solid fa-heart"></i> & <b>Maheswari Devi</b>
+      </p>
+      <p class="couple-loc"><i class="fa-solid fa-location-dot"></i> Kulaikhand Walla, Pauri Garhwal</p>
+    </div>
+
+    <div class="divider-heart">
+      <span class="heart-line"></span>
+      <div class="heart-core">
+        <i class="fa-solid fa-heart heart-icon"></i>
+        <span class="heart-ripple"></span>
+        <span class="heart-ripple delay"></span>
+      </div>
+      <span class="heart-line"></span>
+    </div>
+
+    <div class="couple-card">
+      <div class="crest"><i class="fa-solid fa-om"></i></div>
+      <div class="photo-ring">
+        <!-- ================================================================
+             📸 ADD BRIDE PHOTO HERE: place file at public/images/bride.jpg
+             If missing, shows gold circle with "K" initial automatically.
+             ================================================================ -->
+        <div class="couple-photo">
+          <span class="photo-initial">K</span>
+          <img src="images/bride.jpg" alt="Kajal Rawat" onerror="this.style.display='none'">
+        </div>
+      </div>
+      <h3 class="couple-name">Kajal Rawat</h3>
+      <span class="couple-role">The Bride</span>
+      <div class="name-divider"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+      <p class="couple-detail">
+        <i class="fa-solid fa-user-tie"></i> D/o <b>Gajendra Singh</b><br>
+        <i class="fa-solid fa-heart"></i> & <b>Heema Devi</b>
+      </p>
+      <p class="couple-loc"><i class="fa-solid fa-location-dot"></i> Gaul, Shankarpur, Uttarakhand</p>
+    </div>
+  </div>
+
+  <div class="union-tag"><i class="fa-solid fa-ring"></i> Shubh Vivah • 20th October 2026</div>
+</section>
+
+<!-- FAMILY -->
+<section class="section-pad family-section reveal" id="family">
+  <div class="sec-eyebrow">Blessings Of</div>
+  <h2 class="sec-title">Our Families</h2>
+  <div class="sec-line"></div>
+  <div class="family-grid">
+
+    <!-- GROOM'S FAMILY -->
+    <div class="family-card">
+      <div class="family-top-accent"></div>
+      <div class="parent-photos-row">
+        <!-- ================================================================
+             📸 ADD GROOM'S FATHER PHOTO: public/images/groom-father.jpg
+             ================================================================ -->
+        <div class="parent-photo-item">
+          <div class="parent-photo">
+            <span class="photo-initial">G</span>
+            <img src="images/groom-father.jpg" alt="Brij Mohan Singh" onerror="this.style.display='none'">
+          </div>
+          <span class="parent-label">GrandParents</span>
+        </div>
+        <!-- ================================================================
+             📸 ADD GROOM'S MOTHER PHOTO: public/images/groom-mother.jpg
+             ================================================================ -->
+        <div class="parent-photo-item">
+          <div class="parent-photo">
+            <span class="photo-initial">P</span>
+            <img src="images/groom-mother.jpg" alt="Maheswari Devi" onerror="this.style.display='none'">
+          </div>
+          <span class="parent-label">Parents</span>
+        </div>
+      </div>
+      <div class="garland"></div>
+      <h4>Groom's Family</h4>
+      <span class="fam-role">Negi Family</span>
+      <p>Sh. Jot Singh Negi & Smt. Nanda Devi<br>Sh. Brij Mohan Singh Negi & Smt. Maheswari Devi</p>
+      <span class="fam-village"><i class="fa-solid fa-location-dot"></i> Kulaikhand Walla, Pauri Garhwal</span>
+    </div>
+
+    <!-- BRIDE'S FAMILY -->
+    <div class="family-card">
+      <div class="family-top-accent"></div>
+      <div class="parent-photos-row">
+        <!-- ================================================================
+             📸 ADD BRIDE'S FATHER PHOTO: public/images/bride-father.jpg
+             ================================================================ -->
+        <div class="parent-photo-item">
+          <div class="parent-photo">
+            <span class="photo-initial">G</span>
+            <img src="images/bride-father.jpg" alt="Gajendra Singh" onerror="this.style.display='none'">
+          </div>
+          <span class="parent-label">GrandParents</span>
+        </div>
+        <!-- ================================================================
+             📸 ADD BRIDE'S MOTHER PHOTO: public/images/bride-mother.jpg
+             ================================================================ -->
+        <div class="parent-photo-item">
+          <div class="parent-photo">
+            <span class="photo-initial">P</span>
+            <img src="images/bride-mother.jpg" alt="Heema Devi" onerror="this.style.display='none'">
+          </div>
+          <span class="parent-label">Parents</span>
+        </div>
+      </div>
+      <div class="garland"></div>
+      <h4>Bride's Family</h4>
+      <span class="fam-role">Rawat Family</span>
+      <p>Sh. Udhay Singh Rawat & Kripali Devi<br>Sh. Gajendra Singh Rawat & Smt. Heema Devi</p>
+      <span class="fam-village"><i class="fa-solid fa-location-dot"></i> Village Gaul, Shankarpur, Uttarakhand</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section-pad timeline reveal" id="events">
+  <div class="sec-eyebrow">Save The Dates</div>
+  <h2 class="sec-title">Wedding Celebrations</h2>
+  <div class="sec-line"></div>
+  <div class="timeline-grid">
+    <a href="#mehandi" class="tl-card tl-mehandi">
+      <div class="tl-flash"></div>
+      <div class="tl-particle-layer" id="tlMehandiParticles"></div>
+      <div class="tl-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+      <div class="tl-date">18 OCT 2026</div>
+      <div class="tl-name">Mehandi</div>
+      <div class="tl-desc">Pauri Garhwal</div>
+    </a>
+    <a href="#haldi" class="tl-card tl-haldi">
+      <div class="tl-flash"></div>
+      <div class="tl-particle-layer" id="tlHaldiParticles"></div>
+      <div class="tl-icon"><i class="fa-solid fa-sun"></i></div>
+      <div class="tl-date">19 OCT 2026</div>
+      <div class="tl-name">Haldi</div>
+      <div class="tl-desc">Pauri Garhwal</div>
+    </a>
+    <a href="#wedding" class="tl-card tl-wedding">
+      <div class="tl-flash"></div>
+      <div class="tl-particle-layer" id="tlWeddingParticles"></div>
+      <div class="tl-icon"><i class="fa-solid fa-ring"></i></div>
+      <div class="tl-date">20 OCT 2026</div>
+      <div class="tl-name">Vivah</div>
+      <div class="tl-desc">Pauri Garhwal</div>
+    </a>
+    <a href="#reception" class="tl-card tl-reception">
+      <div class="tl-flash"></div>
+      <div class="tl-boom"></div>
+      <div class="tl-particle-layer" id="tlReceptionParticles"></div>
+      <div class="tl-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+      <div class="tl-date">01 NOV 2026</div>
+      <div class="tl-name">Reception</div>
+      <div class="tl-desc">Burari, Delhi</div>
+    </a>
+  </div>
+</section>
+
+<!-- MEHANDI -->
+<section class="event-section mehandi-bg" id="mehandi">
+  <div class="event-overlay"></div>
+  <div class="petals-container" id="mehandiPetals"></div>
+  <div class="event-content reveal">
+    <div class="event-icon-row"><i class="fa-solid fa-hand-sparkles"></i><i class="fa-solid fa-leaf"></i><i class="fa-solid fa-hand-sparkles"></i></div>
+    <h2 class="event-title">Mehandi</h2>
+    <div class="event-sub">Rachi Jaaye Mehandi Piya Ke Naam Ki</div>
+    <p class="event-desc">The air will be filled with the fragrance of henna as the ladies of both families gather to celebrate with traditional Garhwali songs, laughter, and love.</p>
+    <div class="event-info">
+      <div><i class="fa-solid fa-calendar-days"></i><div class="label">Date</div><div class="value">18th Oct 2026</div></div>
+      <div><i class="fa-solid fa-clock"></i><div class="label">Time</div><div class="value">06:00 PM Onwards</div></div>
+      <div><i class="fa-solid fa-location-dot"></i><div class="label">Venue</div><div class="value">Kulaikhand Walla, Pauri Garhwal</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HALDI -->
+<section class="event-section haldi-bg" id="haldi">
+  <div class="event-overlay"></div>
+  <div class="petals-container" id="haldiPetals"></div>
+  <div class="event-content reveal">
+    <div class="event-icon-row"><i class="fa-solid fa-mortar-pestle"></i><i class="fa-solid fa-seedling"></i><i class="fa-solid fa-mortar-pestle"></i></div>
+    <h2 class="event-title">Haldi</h2>
+    <div class="event-sub">Ubtan Ki Rasam — Blessings of Turmeric</div>
+    <p class="event-desc">A joyous ceremony where family & friends bless the couple with sacred turmeric paste, amidst marigold flowers and folk songs of the Garhwal hills.</p>
+    <div class="event-info">
+      <div><i class="fa-solid fa-calendar-days"></i><div class="label">Date</div><div class="value">19th Oct 2026</div></div>
+      <div><i class="fa-solid fa-clock"></i><div class="label">Time</div><div class="value">10:00 AM Onwards</div></div>
+      <div><i class="fa-solid fa-location-dot"></i><div class="label">Venue</div><div class="value">Kulaikhand Walla, Pauri Garhwal</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WEDDING -->
+<section class="event-section wedding-bg" id="wedding">
+  <div class="event-overlay"></div>
+  <div class="petals-container" id="weddingPetals"></div>
+  <div class="event-content reveal">
+    <div class="dhol-wrap">
+      <div class="dhol beat"><div class="cap"></div><div class="drum"></div><div class="stick left"></div><div class="stick right"></div></div>
+      <div class="dhol beat" style="animation-delay:.25s;"><div class="cap"></div><div class="drum"></div><div class="stick left"></div><div class="stick right"></div></div>
+    </div>
+    <h2 class="event-title">The Wedding</h2>
+    <div class="event-sub">Vivah Sanskar • ढोल दमाऊ की गूँज</div>
+    <p class="event-desc">To the beats of Dhol-Damau and rhythms of the mountains, Ankit & Kajal shall be united in sacred matrimony as per Garhwali Vedic rituals.</p>
+    <div class="event-info">
+      <div><i class="fa-solid fa-calendar-days"></i><div class="label">Date</div><div class="value">20th Oct 2026</div></div>
+      <div><i class="fa-solid fa-clock"></i><div class="label">Muhurat</div><div class="value">As Per Panchang</div></div>
+      <div><i class="fa-solid fa-location-dot"></i><div class="label">Venue</div><div class="value">Kulaikhand Walla, Pauri Garhwal</div></div>
+    </div>
+    <div class="diya-row">
+      <div class="diya"><div class="flame"></div></div>
+      <div class="diya"><div class="flame"></div></div>
+      <div class="diya"><div class="flame"></div></div>
+      <div class="diya"><div class="flame"></div></div>
+      <div class="diya"><div class="flame"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RECEPTION -->
+<section class="event-section reception-bg" id="reception">
+  <div class="event-overlay"></div>
+  <div class="firecracker-layer" id="receptionSparks"></div>
+  <div class="event-content reveal">
+    <div class="event-icon-row"><i class="fa-solid fa-champagne-glasses"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-champagne-glasses"></i></div>
+    <h2 class="event-title">Reception</h2>
+    <div class="event-sub">An Evening of Celebration</div>
+    <p class="event-desc">Join us in Delhi for an elegant evening to celebrate the newly married couple with dinner, music, and blessings for their new journey.</p>
+    <div class="event-info">
+      <div><i class="fa-solid fa-calendar-days"></i><div class="label">Date</div><div class="value">1st Nov 2026</div></div>
+      <div><i class="fa-solid fa-clock"></i><div class="label">Time</div><div class="value">6:00 PM Onwards</div></div>
+      <div><i class="fa-solid fa-location-dot"></i><div class="label">Venue</div><div class="value">Burari, Delhi - 110084</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VENUE -->
+<section class="section-pad venue reveal" id="venue">
+  <div class="sec-eyebrow">Getting There</div>
+  <h2 class="sec-title">Venue Details</h2>
+  <div class="sec-line"></div>
+  <div class="venue-grid">
+    <div class="venue-card">
+      <iframe class="venue-map" loading="lazy" src="https://maps.google.com/maps?q=29.695168,79.084602&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+      <div class="venue-info">
+        <h4>Mehandi • Haldi • Wedding</h4>
+        <p>Kulaikhand Walla, Pauri Garhwal, Uttarakhand</p>
+        <a class="btn-direction" href="https://www.google.com/maps/search/?api=1&query=29.695168,79.084602" target="_blank"><i class="fa-solid fa-diamond-turn-right"></i> Get Directions</a>
+      </div>
+    </div>
+    <div class="venue-card">
+      <iframe class="venue-map" loading="lazy" src="https://maps.google.com/maps?q=Burari%20Delhi%20110084&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+      <div class="venue-info">
+        <h4>Reception</h4>
+        <p>Burari, Delhi - 110084</p>
+        <a class="btn-direction" href="https://www.google.com/maps/search/?api=1&query=Burari+Delhi+110084" target="_blank"><i class="fa-solid fa-diamond-turn-right"></i> Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WISHES WALL -->
+<section class="section-pad wishes reveal" id="wishes">
+  <div class="sec-eyebrow">Blessings & Love</div>
+  <h2 class="sec-title">Wishes Wall</h2>
+  <div class="sec-line"></div>
+  <div class="wishes-layout">
+    <div class="wish-form-box">
+      <h4><i class="fa-solid fa-feather"></i> Leave Your Blessing</h4>
+      <form id="wishForm">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="wishName" placeholder="e.g. Rekha Bisht" required>
+        </div>
+        <div class="form-group">
+          <label>Your Message</label>
+          <textarea id="wishText" placeholder="Write your wishes & blessings for Ankit & Kajal..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="wishSubmitBtn"><i class="fa-solid fa-paper-plane"></i> Send Blessing</button>
+      </form>
+    </div>
+    <div class="wishes-wall" id="wishesWall">
+      <p style="color:#a89ec2;text-align:center;">Loading wishes...</p>
+    </div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section class="section-pad rsvp reveal" id="rsvp">
+  <div class="sec-eyebrow">Kindly Confirm</div>
+  <h2 class="sec-title">RSVP</h2>
+  <div class="sec-line"></div>
+  <div class="rsvp-box">
+    <h4><i class="fa-solid fa-champagne-glasses"></i> Will You Be Joining Us?</h4>
+    <form id="rsvpForm">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="rsvpName" placeholder="Your Full Name" required>
+      </div>
+      <div class="form-group">
+        <label>Phone / WhatsApp Number</label>
+        <input type="tel" id="rsvpPhone" placeholder="+91 XXXXX XXXXX" required>
+      </div>
+      <div class="form-group">
+        <label>Which Function(s) Will You Attend?</label>
+        <div class="func-grid">
+          <label class="func-check"><input type="checkbox" name="func" value="Mehandi (18 Oct)"><i class="fa-solid fa-hand-sparkles"></i><span>Mehandi (18 Oct)</span></label>
+          <label class="func-check"><input type="checkbox" name="func" value="Haldi (19 Oct)"><i class="fa-solid fa-sun"></i><span>Haldi (19 Oct)</span></label>
+          <label class="func-check"><input type="checkbox" name="func" value="Wedding (20 Oct)"><i class="fa-solid fa-ring"></i><span>Wedding (20 Oct)</span></label>
+          <label class="func-check"><input type="checkbox" name="func" value="Reception (1 Nov)"><i class="fa-solid fa-champagne-glasses"></i><span>Reception (1 Nov)</span></label>
+        </div>
+      </div>
+      <div class="guest-row">
+        <div class="form-group">
+          <label>Total Guests Coming</label>
+          <input type="number" id="rsvpGuests" min="1" max="20" placeholder="e.g. 4" required>
+        </div>
+        <div class="form-group">
+          <label>Any Message (optional)</label>
+          <input type="text" id="rsvpMsg" placeholder="We can't wait!">
+        </div>
+      </div>
+      <button type="submit" class="submit-btn" id="rsvpSubmitBtn"><i class="fa-solid fa-check"></i> Confirm My RSVP</button>
+      <p class="rsvp-note">Your response helps us plan seating & meals with love 🙏</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-om">ॐ</div>
+  <p class="footer-blessing">"आप सभी का स्नेह और आशीर्वाद ही हमारे इस नए सफर की सबसे बड़ी पूंजी है।<br>हमारी शादी में आपकी उपस्थिति हमारे लिए सौभाग्य की बात होगी।"</p>
+  <div class="footer-names">Ankit & Kajal</div>
+  <p class="footer-sub">With love from the families of Negi (Pauri Garhwal) & Rawat (Shankarpur)</p>
+
+  <!-- ================================================================
+       📞 CALL & WHATSAPP NUMBERS — EDIT HERE
+       Format: country code + number, NO spaces, NO +, NO dashes in the href
+       Example for India: 91 9876543210 → use 919876543210
+       ================================================================ -->
+  <div class="footer-contact">
+    <a href="tel:+918368771198" class="contact-btn">
+      <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+      <span class="contact-text">Call Us<b>+91 83687 71198</b></span>
+    </a>
+    <a href="https://wa.me/919911317448" target="_blank" class="contact-btn whatsapp">
+      <span class="contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
+      <span class="contact-text">WhatsApp Us<b>+91 99113 17448</b></span>
+    </a>
+  </div>
+
+  <div class="footer-back-home">
+    <a href="#home"><i class="fa-solid fa-mountain"></i></a>
+  </div>
+
+  <div class="footer-credit">Made with ❤ &amp; Garhwali Roots • Jai Badri Vishal 🙏</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* LOADER */
+window.addEventListener('load',()=>{ setTimeout(()=>document.getElementById('loader').classList.add('hide'), 1400); });
+
+/* NAV TOGGLE */
+const navToggle=document.getElementById('navToggle');
+const navLinks=document.getElementById('navLinks');
+navToggle.addEventListener('click',()=>navLinks.classList.toggle('active'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('active')));
+
+/* MUSIC TOGGLE */
+const musicBtn=document.getElementById('musicBtn');
+const bgAudio=document.getElementById('bgAudio');
+let playing=false;
+musicBtn.addEventListener('click',()=>{
+  if(!playing){ bgAudio.play().catch(()=>{}); musicBtn.classList.add('playing'); musicBtn.innerHTML='<i class="fa-solid fa-pause"></i>'; }
+  else{ bgAudio.pause(); musicBtn.classList.remove('playing'); musicBtn.innerHTML='<i class="fa-solid fa-music"></i>'; }
+  playing=!playing;
+});
+
+/* COUNTDOWN */
+const weddingDate=new Date('2026-10-20T07:00:00+05:30').getTime();
+function updateCountdown(){
+  const now=new Date().getTime();
+  const diff=weddingDate-now;
+  if(diff<=0){document.getElementById('countdown').innerHTML='<h3 style="font-family:var(--font-script);font-size:2rem;color:#5a2d00">The Wedding Day is Here! 🎉</h3>';return;}
+  const d=Math.floor(diff/(1000*60*60*24));
+  const h=Math.floor((diff/(1000*60*60))%24);
+  const m=Math.floor((diff/(1000*60))%60);
+  const s=Math.floor((diff/1000)%60);
+  document.getElementById('cd-days').textContent=String(d).padStart(2,'0');
+  document.getElementById('cd-hours').textContent=String(h).padStart(2,'0');
+  document.getElementById('cd-mins').textContent=String(m).padStart(2,'0');
+  document.getElementById('cd-secs').textContent=String(s).padStart(2,'0');
+}
+updateCountdown(); setInterval(updateCountdown,1000);
+
+/* CLOUDS */
+const cloudsBox=document.getElementById('clouds');
+for(let i=0;i<5;i++){
+  const c=document.createElement('div'); c.className='cloud';
+  const w=80+Math.random()*100, h=w*0.35;
+  c.style.width=w+'px'; c.style.height=h+'px';
+  c.style.top=(5+Math.random()*30)+'%';
+  c.style.animationDuration=(40+Math.random()*30)+'s';
+  c.style.animationDelay=(-Math.random()*40)+'s';
+  cloudsBox.appendChild(c);
+}
+
+/* BIRDS */
+const birdsBox=document.getElementById('birdsContainer');
+const birdSVG=`<svg viewBox="0 0 60 30"><path class="wing" d="M0 15 Q15 0 30 15 Q45 0 60 15" stroke="#1a1a1a" stroke-width="4" fill="none" stroke-linecap="round"/></svg>`;
+for(let i=0;i<8;i++){
+  const b=document.createElement('div'); b.className='bird'; b.innerHTML=birdSVG;
+  b.style.top=(10+Math.random()*35)+'%';
+  b.style.width=(20+Math.random()*20)+'px';
+  b.style.height='16px';
+  b.style.animationDuration=(14+Math.random()*10)+'s';
+  b.style.animationDelay=(-Math.random()*20)+'s';
+  birdsBox.appendChild(b);
+}
+
+/* PATANG BUNTING */
+const patangColors=['#e63946','#ffb703','#2a9d8f','#118ab2','#f4a261','#ef476f','#06d6a0','#8338ec'];
+const patangBox=document.getElementById('patangFlags');
+for(let i=0;i<20;i++){
+  const p=document.createElement('div'); p.className='patang';
+  p.style.setProperty('--pc', patangColors[Math.floor(Math.random()*patangColors.length)]);
+  p.style.animationDelay=(Math.random()*2)+'s';
+  patangBox.appendChild(p);
+}
+
+/* WARM BLINKING LED LIGHTS — CURVED SWAG STYLE */
+function createLEDString(id, count, segments, dip){
+  const box = document.getElementById(id);
+  box.innerHTML = '';
+
+  const width = box.offsetWidth || 1000;
+  const height = 55;
+  const topY = height * 0.25;
+  const dipY = topY + dip;
+  const segWidth = width / segments;
+
+  let d = `M0,${topY}`;
+  for(let s = 0; s < segments; s++){
+    const xMid = (s + 0.5) * segWidth;
+    const xEnd = (s + 1) * segWidth;
+    d += ` Q${xMid},${dipY} ${xEnd},${topY}`;
+  }
+
+  const svgNS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(svgNS, "svg");
+  svg.setAttribute("class", "led-svg-wire");
+  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.setAttribute("preserveAspectRatio", "none");
+  const path = document.createElementNS(svgNS, "path");
+  path.setAttribute("d", d);
+  svg.appendChild(path);
+  box.appendChild(svg);
+
+  function bezierPoint(t, p0, p1, p2){
+    const x = (1-t)*(1-t)*p0.x + 2*(1-t)*t*p1.x + t*t*p2.x;
+    const y = (1-t)*(1-t)*p0.y + 2*(1-t)*t*p1.y + t*t*p2.y;
+    return {x, y};
+  }
+
+  const warmColors = ['#ffb703','#ff8c00','#ff6b35','#ffd166','#ffcf40','#ff5e5b','#ffa62b','#ffde59'];
+
+  for(let i = 0; i < count; i++){
+    const overallFrac = i / (count - 1);
+    const segFloat = overallFrac * segments;
+    const segIndex = Math.min(Math.floor(segFloat), segments - 1);
+    const localT = segFloat - segIndex;
+
+    const p0 = { x: segIndex * segWidth, y: topY };
+    const p1 = { x: (segIndex + 0.5) * segWidth, y: dipY };
+    const p2 = { x: (segIndex + 1) * segWidth, y: topY };
+
+    const pt = bezierPoint(localT, p0, p1, p2);
+    const leftPct = (pt.x / width) * 100;
+
+    const b = document.createElement('div');
+    b.className = 'led-bulb blink';
+    b.style.left = leftPct + '%';
+    b.style.top = pt.y + 'px';
+    b.style.color = warmColors[Math.floor(Math.random() * warmColors.length)];
+    b.style.animationDuration = (0.9 + Math.random() * 1.8).toFixed(2) + 's';
+    b.style.animationDelay = '-' + (Math.random() * 2).toFixed(2) + 's';
+    box.appendChild(b);
+  }
+}
+createLEDString('ledTop', 38, 6, 30);
+createLEDString('ledBottom', 38, 6, 30);
+
+let ledResizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(ledResizeTimer);
+  ledResizeTimer = setTimeout(() => {
+    createLEDString('ledTop', 38, 6, 30);
+    createLEDString('ledBottom', 38, 6, 30);
+  }, 250);
+});
+
+/* PETALS GENERATOR */
+function makePetals(containerId,colors,count){
+  const box=document.getElementById(containerId);
+  if(!box) return;
+  for(let i=0;i<count;i++){
+    const p=document.createElement('div'); p.className='petal';
+    const size=6+Math.random()*10;
+    p.style.width=size+'px'; p.style.height=size+'px';
+    p.style.left=Math.random()*100+'%';
+    p.style.background=colors[Math.floor(Math.random()*colors.length)];
+    p.style.animationDuration=(6+Math.random()*8)+'s';
+    p.style.animationDelay=(-Math.random()*10)+'s';
+    box.appendChild(p);
+  }
+}
+makePetals('mehandiPetals',['#c9e265','#8bc34a','#ffb703'],22);
+makePetals('haldiPetals',['#ffb703','#ff9800','#ffe066'],26);
+makePetals('weddingPetals',['#ffd700','#b8143c','#ff6b81'],26);
+makePetals('couplePetals', ['#d4af37','#7a0c1e','#f4e4b8'], 12);
+
+/* RECEPTION FIRECRACKER SPARKS */
+function createSparks(id, count){
+  const box=document.getElementById(id);
+  if(!box) return;
+  const colors=['#ffd700','#ff5e5b','#ffffff','#ffa62b','#d4af37'];
+  for(let i=0;i<count;i++){
+    const s=document.createElement('span'); s.className='spark';
+    const angle=Math.random()*2*Math.PI;
+    const dist=50+Math.random()*100;
+    s.style.setProperty('--sx', Math.cos(angle)*dist+'px');
+    s.style.setProperty('--sy', Math.sin(angle)*dist+'px');
+    s.style.left=(10+Math.random()*80)+'%';
+    s.style.top=(10+Math.random()*70)+'%';
+    s.style.background=colors[Math.floor(Math.random()*colors.length)];
+    s.style.boxShadow=`0 0 8px 2px ${colors[Math.floor(Math.random()*colors.length)]}`;
+    s.style.animationDuration=(1.6+Math.random()*1.6)+'s';
+    s.style.animationDelay=(-Math.random()*3)+'s';
+    box.appendChild(s);
+  }
+}
+createSparks('receptionSparks', 30);
+
+/* TIMELINE HOVER PARTICLES */
+function fillTLParticles(id, cls, count, colors){
+  const box=document.getElementById(id);
+  if(!box) return;
+  for(let i=0;i<count;i++){
+    const s=document.createElement('span');
+    s.className='tl-particle '+cls;
+    s.style.setProperty('--l', Math.random()*90+'%');
+    s.style.setProperty('--d', (Math.random()*0.7).toFixed(2)+'s');
+    if(colors) s.style.setProperty('--c', colors[Math.floor(Math.random()*colors.length)]);
+    if(cls==='p-reception'){
+      const angle=Math.random()*2*Math.PI;
+      const dist=40+Math.random()*55;
+      s.style.setProperty('--dx', Math.cos(angle)*dist+'px');
+      s.style.setProperty('--dy', Math.sin(angle)*dist+'px');
+    }
+    box.appendChild(s);
+  }
+}
+fillTLParticles('tlMehandiParticles','p-mehandi',10);
+fillTLParticles('tlHaldiParticles','p-haldi',12);
+fillTLParticles('tlWeddingParticles','p-wedding',16,['#ffd700','#b8143c','#ff6b81','#ffffff']);
+fillTLParticles('tlReceptionParticles','p-reception',18,['#ffd700','#ff5e5b','#ffffff']);
+
+/* SCROLL REVEAL */
+const revealEls=document.querySelectorAll('.reveal');
+const io=new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('active'); }); },{threshold:0.15});
+revealEls.forEach(el=>io.observe(el));
+
+/* TOAST */
+function showToast(msg, isError=false){
+  const toast=document.getElementById('toast');
+  toast.textContent=msg;
+  toast.className='toast show'+(isError?' error':'');
+  setTimeout(()=>{ toast.classList.remove('show'); },4000);
+}
+function escapeHtml(str){
+  const div=document.createElement('div'); div.textContent=str; return div.innerHTML;
+}
+
+/* ===================== WISHES (BACKEND) ===================== */
+const wishesWall=document.getElementById('wishesWall');
+
+async function loadWishes(){
+  try{
+    const res=await fetch('/api/wishes');
+    const wishes=await res.json();
+    wishesWall.innerHTML='';
+    if(wishes.length===0){ wishesWall.innerHTML='<p style="color:#a89ec2;text-align:center;">Be the first to leave a blessing!</p>'; return; }
+    wishes.forEach(w=>{
+      const card=document.createElement('div'); card.className='wish-card';
+      card.innerHTML=`<div class="wname"><i class="fa-solid fa-quote-left"></i> ${escapeHtml(w.name)}</div><div class="wtext">${escapeHtml(w.text)}</div>`;
+      wishesWall.appendChild(card);
+    });
+  }catch(err){
+    wishesWall.innerHTML='<p style="color:#e08a8a;text-align:center;">Could not load wishes. Is the server running?</p>';
+  }
+}
+loadWishes();
+
+document.getElementById('wishForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const btn=document.getElementById('wishSubmitBtn');
+  const name=document.getElementById('wishName').value.trim();
+  const text=document.getElementById('wishText').value.trim();
+  if(!name||!text) return;
+  btn.disabled=true; btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+  try{
+    const res=await fetch('/api/wishes', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({name, text})
+    });
+    const data=await res.json();
+    if(data.success){
+      this.reset();
+      loadWishes();
+      showToast('🙏 Thank you! Your blessing has been added to the Wishes Wall.');
+    } else {
+      showToast('⚠️ '+(data.error||'Something went wrong'), true);
+    }
+  }catch(err){
+    showToast('⚠️ Could not connect to server.', true);
+  } finally {
+    btn.disabled=false; btn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Send Blessing';
+  }
+});
+
+/* ===================== RSVP (BACKEND) ===================== */
+document.getElementById('rsvpForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const btn=document.getElementById('rsvpSubmitBtn');
+  const name=document.getElementById('rsvpName').value.trim();
+  const phone=document.getElementById('rsvpPhone').value.trim();
+  const guests=document.getElementById('rsvpGuests').value.trim();
+  const message=document.getElementById('rsvpMsg').value.trim();
+  const functions=[...document.querySelectorAll('input[name="func"]:checked')].map(c=>c.value);
+
+  if(functions.length===0){ showToast('⚠️ Please select at least one function you will attend.', true); return; }
+
+  btn.disabled=true; btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+  try{
+    const res=await fetch('/api/rsvp', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({name, phone, guests, functions, message})
+    });
+    const data=await res.json();
+    if(data.success){
+      this.reset();
+      showToast(`✅ Thank you ${name}! ${guests} guest(s) confirmed for: ${functions.join(', ')}`);
+
+      /* ============================================================
+         👇 TO CHANGE RSVP WHATSAPP NUMBER, EDIT BELOW LINE 👇
+         This automatically opens WhatsApp with guest's RSVP details
+         sent to YOUR number, right after they submit the form.
+         Format: countrycode+number (no +, no spaces, no dashes)
+         ============================================================ */
+      const waText = encodeURIComponent(
+        `🙏 New RSVP for Ankit & Kajal's Wedding\n\nName: ${name}\nPhone: ${phone}\nAttending: ${functions.join(', ')}\nGuests: ${guests}\nMessage: ${message || '-'}`
+      );
+      window.open(`https://wa.me/919911317448?text=${waText}`, '_blank');
+      /* ============================================================ */
+
+    } else {
+      showToast('⚠️ '+(data.error||'Something went wrong'), true);
+    }
+  }catch(err){
+    showToast('⚠️ Could not connect to server. Please try again.', true);
+  } finally {
+    btn.disabled=false; btn.innerHTML='<i class="fa-solid fa-check"></i> Confirm My RSVP';
+  }
+});
+</script>
+</body>
+</html>
