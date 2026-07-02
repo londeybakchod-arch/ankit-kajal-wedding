@@ -1,7 +1,4 @@
-// Force the server to serve index.html for the home page
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -13,7 +10,10 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
-
+// Force the server to serve index.html for the home page
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 const DATA_DIR = path.join(__dirname, 'data');
 const WISHES_FILE = path.join(DATA_DIR, 'wishes.json');
 const RSVP_FILE = path.join(DATA_DIR, 'rsvp.json');
